@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Algorithms | Interactive Learning Platform</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">CPU Scheduling</div>
+            
+            <div class="menu-icon" id="menuToggle">☰</div>
+            
+            <ul class="menu" id="menu">
+                <li><a href="https://byeasmin.github.io/fcfs/" target="_blank">FCFS</a></li>
+                <li><a href="https://byeasmin.github.io/sjf/" target="_blank">SJF</a></li>
+                <li><a href="https://byeasmin.github.io/srtf/" target="_blank">SRTF</a></li>
+                <li><a href="https://byeasmin.github.io/priority/" target="_blank">Priority</a></li>
+                <li><a href="https://byeasmin.github.io/roundrobin/" target="_blank">Round Robin</a></li>
+                <li><a href="https://byeasmin.github.io/team/" target="_blank">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Process Sheduler</h1>
+            <p>An interactive educational platform designed to visualize and understand fundamental CPU scheduling algorithms through practical demonstrations and detailed explanations.</p>
+            <div class="hero-cta">
+                <a href="#algorithms" class="btn btn-primary">
+                    <span>Explore Algorithms</span>
+                    <span>↓</span>
+                </a>
+                <a href="https://byeasmin.github.io/team/" class="btn btn-secondary" target="_blank">
+                    <span>Meet Our Team</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALGORITHMS SECTION -->
+    <section class="cards-section" id="algorithms">
+        <div class="section-header">
+            <h2>Scheduling Algorithms</h2>
+            <p>Learn about different CPU scheduling techniques with interactive visualizations</p>
+        </div>
+        
+        <div class="cards-grid">
+            <!-- FCFS Card -->
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>FCFS</h3>
+                <p class="algorithm-type"><span class="type-tag non-preemptive">Non-Preemptive</span></p>
+                <p>First Come First Served is the simplest CPU scheduling algorithm that executes processes in the order they arrive.</p>
+                <ul class="card-features">
+                    <li>Non-preemptive scheduling</li>
+                    <li>Simple implementation</li>
+                    <li>First-in-first-out approach</li>
+                    <li>No starvation</li>
+                </ul>
+                <div class="card-buttons">
+                    <a href="https://www.geeksforgeeks.org/program-for-fcfs-cpu-scheduling-set-1/" 
+                       class="card-btn btn-learn" target="_blank">Learn More</a>
+                    <a href="https://byeasmin.github.io/fcfs/" 
+                       class="card-btn btn-demo" target="_blank">Try Demo</a>
+                </div>
+            </div>
+
+            <!-- SJF Card -->
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>SJF</h3>
+                <p class="algorithm-type">
+                    <span class="type-tag non-preemptive">Non-Preemptive</span>
+                    <span class="type-tag preemptive">Preemptive</span>
+                </p>
+                <p>Shortest Job First selects the process with the smallest execution time, minimizing average waiting time.</p>
+                <ul class="card-features">
+                    <li>Optimal for minimizing wait time</li>
+                    <li>Can be preemptive or non-preemptive</li>
+                    <li>Requires burst time knowledge</li>
+                    <li>May cause starvation</li>
+                </ul>
+                <div class="card-buttons">
+                    <a href="https://www.geeksforgeeks.org/program-for-shortest-job-first-or-sjf-cpu-scheduling-set-1-non-preemptive/" 
+                       class="card-btn btn-learn" target="_blank">Learn More</a>
+                    <a href="https://byeasmin.github.io/sjf/" 
+                       class="card-btn btn-demo" target="_blank">Try Demo</a>
+                </div>
+            </div>
+
+            <!-- SRTF Card -->
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>SRTF</h3>
+                <p class="algorithm-type"><span class="type-tag preemptive">Preemptive</span></p>
+                <p>Shortest Remaining Time First is the preemptive version of SJF that dynamically selects processes based on remaining time.</p>
+                <ul class="card-features">
+                    <li>Preemptive scheduling</li>
+                    <li>Dynamic priority adjustment</li>
+                    <li>Better response time</li>
+                    <li>Context switching overhead</li>
+                </ul>
+                <div class="card-buttons">
+                    <a href="https://www.geeksforgeeks.org/introduction-of-shortest-remaining-time-first-srtf-algorithm/" 
+                       class="card-btn btn-learn" target="_blank">Learn More</a>
+                    <a href="https://byeasmin.github.io/srtf/" 
+                       class="card-btn btn-demo" target="_blank">Try Demo</a>
+                </div>
+            </div>
+
+            <!-- Priority Card -->
+            <div class="card">
+                <div class="card-number">04</div>
+                <h3>Priority Scheduling</h3>
+                <p class="algorithm-type">
+                    <span class="type-tag non-preemptive">Non-Preemptive</span>
+                    <span class="type-tag preemptive">Preemptive</span>
+                </p>
+                <p>CPU is allocated to the process with the highest priority, ensuring critical tasks are handled first.</p>
+                <ul class="card-features">
+                    <li>Priority-based execution</li>
+                    <li>Can cause starvation</li>
+                    <li>Aging technique available</li>
+                    <li>Real-time systems use</li>
+                </ul>
+                <div class="card-buttons">
+                    <a href="https://www.geeksforgeeks.org/priority-cpu-scheduling-with-different-arrival-time-set-2/" 
+                       class="card-btn btn-learn" target="_blank">Learn More</a>
+                    <a href="https://byeasmin.github.io/priority/" 
+                       class="card-btn btn-demo" target="_blank">Try Demo</a>
+                </div>
+            </div>
+
+            <!-- Round Robin Card -->
+            <div class="card">
+                <div class="card-number">05</div>
+                <h3>Round Robin</h3>
+                <p class="algorithm-type"><span class="type-tag preemptive">Preemptive</span></p>
+                <p>Each process gets a fixed time quantum in cyclic order, ensuring fair CPU allocation among all processes.</p>
+                <ul class="card-features">
+                    <li>Preemptive scheduling</li>
+                    <li>Time quantum based</li>
+                    <li>No starvation</li>
+                    <li>Good for time-sharing systems</li>
+                </ul>
+                <div class="card-buttons">
+                    <a href="https://www.geeksforgeeks.org/program-round-robin-scheduling-set-1/" 
+                       class="card-btn btn-learn" target="_blank">Learn More</a>
+                    <a href="https://byeasmin.github.io/roundrobin/" 
+                       class="card-btn btn-demo" target="_blank">Try Demo</a>
+                </div>
+            </div>
+
+            <!-- Comparison Card -->
+            <div class="card comparison-card">
+                <div class="card-number">06</div>
+                <h3>Algorithm Comparison</h3>
+                <p>Quick comparison of key characteristics across different scheduling algorithms</p>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Algorithm</th>
+                                <th>Type</th>
+                                <th>Starvation</th>
+                                <th>Complexity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FCFS</td>
+                                <td>Non-Preemptive</td>
+                                <td>No</td>
+                                <td>Low</td>
+                            </tr>
+                            <tr>
+                                <td>SJF</td>
+                                <td>Both</td>
+                                <td>Yes</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>SRTF</td>
+                                <td>Preemptive</td>
+                                <td>Yes</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>Priority</td>
+                                <td>Both</td>
+                                <td>Yes</td>
+                                <td>Medium</td>
+                            </tr>
+                            <tr>
+                                <td>Round Robin</td>
+                                <td>Preemptive</td>
+                                <td>No</td>
+                                <td>Medium</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFORMANCE METRICS SECTION -->
+    <section class="performance-section">
+        <div class="section-header">
+            <h2>Algorithm Performance</h2>
+            <p>Compare key metrics across different scheduling algorithms</p>
+        </div>
+        <div class="performance-grid">
+            <div class="metric-card">
+                <div class="metric-icon">⏱️</div>
+                <h4>Average Waiting Time</h4>
+                <p>SJF & SRTF → Optimal</p>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">⚙️</div>
+                <h4>Implementation Complexity</h4>
+                <p>FCFS → Simplest</p>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">🚀</div>
+                <h4>Response Time</h4>
+                <p>Round Robin → Best</p>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">⚠️</div>
+                <h4>Starvation Issue</h4>
+                <p>Priority & SJF → Possible</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TYPES EXPLANATION SECTION -->
+    <section class="types-section">
+        <div class="section-header">
+            <h2>Scheduling Types</h2>
+            <p>Understanding preemptive vs non-preemptive scheduling</p>
+        </div>
+        <div class="types-grid">
+            <div class="type-card">
+                <div class="type-header">
+                    <h3>Preemptive Scheduling</h3>
+                    <span class="type-badge preemptive">Preemptive</span>
+                </div>
+                <p>Processes can be interrupted during execution and moved back to ready queue.</p>
+                <ul>
+                    <li>Allows higher priority processes to run first</li>
+                    <li>Better for time-sharing systems</li>
+                    <li>More context switching overhead</li>
+                    <li>Examples: Round Robin, SRTF, Priority (Preemptive)</li>
+                </ul>
+            </div>
+            <div class="type-card">
+                <div class="type-header">
+                    <h3>Non-Preemptive Scheduling</h3>
+                    <span class="type-badge non-preemptive">Non-Preemptive</span>
+                </div>
+                <p>Process runs to completion or until it voluntarily yields the CPU.</p>
+                <ul>
+                    <li>Simpler to implement</li>
+                    <li>Less context switching overhead</li>
+                    <li>May cause longer waiting times</li>
+                    <li>Examples: FCFS, SJF (Non-Preemptive), Priority (Non-Preemptive)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 CPU Scheduling Algorithms Educational Platform. All rights reserved.</p>
+            <p>Designed for academic and educational purposes.</p>
+            <div class="footer-links">
+                <a href="https://byeasmin.github.io/team/" target="_blank">Team</a> |
+                <a href="#algorithms">Algorithms</a> |
+                <a href="#types">Scheduling Types</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
